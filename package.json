@@ -19,6 +19,7 @@
   "dependencies": {
     "art-template": "^4.13.2",
     "chalk": "^5.2.0",
+    "chatgpt": "^5.2.4",
     "chokidar": "^3.5.3",
     "https-proxy-agent": "5.0.1",
     "icqq": "^0.3.10",
