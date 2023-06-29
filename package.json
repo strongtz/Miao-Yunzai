@@ -17,12 +17,13 @@
     "log": "pm2 logs --lines 400 Miao-Yunzai"
   },
   "dependencies": {
+    "@fastify/websocket": "^8.1.0",
     "art-template": "^4.13.2",
     "chalk": "^5.2.0",
     "chatgpt": "^5.2.4",
     "chokidar": "^3.5.3",
     "https-proxy-agent": "5.0.1",
-    "icqq": "^0.3.14",
+    "icqq": "^0.4.7",
     "image-size": "^1.0.2",
     "inquirer": "^8.2.5",
     "lodash": "^4.17.21",

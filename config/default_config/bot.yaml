@@ -21,3 +21,4 @@ proxyAddress:
 online_msg: true
 # 上线推送通知的冷却时间
 online_msg_exp: 86400
+sign_api_addr: https://qq.avocado.wiki/63/sign
