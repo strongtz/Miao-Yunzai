@@ -395,6 +395,8 @@ export default class MysInfo {
         if (res.api === 'detail') res.retcode = 0
         break
       case 5003:
+        if (!isTask) this.e.reply('米游社账号异常，暂时无法查询')
+        break
       case 1034:
         let handler = this.e.runtime?.handler || {}
 
@@ -408,6 +410,9 @@ export default class MysInfo {
           logger.mark(`[米游社查询失败][uid:${this.uid}][qq:${this.userId}] 遇到验证码`)
           if (!isTask) this.e.reply('米游社查询遇到验证码，请稍后再试')
         }
+        break
+      case 10307:
+        if (!isTask) this.e.reply('版本更新期间，数据维护中')
         break
       default:
         if (!isTask) this.e.reply(`米游社接口报错，暂时无法查询：${res.message || 'error'}`)
