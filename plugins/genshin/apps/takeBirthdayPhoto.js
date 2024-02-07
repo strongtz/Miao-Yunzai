@@ -96,7 +96,7 @@ export class takeBirthdayPhoto extends plugin {
   }
 
   async getServer(uid) {
-    switch (String(uid)[0]) {
+    switch (String(uid).slice(0, -8)) {
       case '1':
       case '2':
         return 'cn_gf01'
@@ -107,6 +107,7 @@ export class takeBirthdayPhoto extends plugin {
       case '7':
         return 'os_euro'
       case '8':
+      case '18':
         return 'os_asia'
       case '9':
         return 'os_cht'
