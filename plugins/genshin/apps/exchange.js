@@ -115,13 +115,8 @@ export class exchange extends plugin {
     }
 
     for (const p of ret.data.list) {
-      let post
-      try {
-        post = p.post.post
-      } catch (e) {
-        logger.error('活动数据获取异常')
-        logger.error(e)
-      }
+      // Not every posts have post.post
+      let post = p?.post?.post
       if (!post) {
         continue
       }
@@ -136,7 +131,7 @@ export class exchange extends plugin {
         date.setDate(date.getDate() + 1)
         this.deadline = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 23:59:59`
       } else {
-        date.setDate(date.getDate() + 3)
+        date.setDate(date.getDate() + 5)
         this.deadline = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 12:00:00`
       }
       let structured_content = post.structured_content
